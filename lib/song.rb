@@ -32,11 +32,11 @@ class Song
     self.all.detect { |song| song.name == song_name }
   end 
   
-  def self.find_or_create_by_name(name)
-    if Song.find_by_name(name)
-      Song.find_by_name(name)
+  def self.find_or_create_by_name(song_name)
+    if Song.find_by_name(song_name)
+      Song.find_by_name(song_name)
     else 
-      Song.create_by_name(name)
+      Song.create_by_name(song_name)
     end 
   end 
   
@@ -44,7 +44,7 @@ class Song
     self.all.sort_by { |song| song.name }
   end 
   
-  def self.new_from_filename(song)
+  def self.new_from_filename(song_name)
     
   end 
 end
