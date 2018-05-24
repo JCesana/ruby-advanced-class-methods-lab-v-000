@@ -48,7 +48,7 @@ class Song
     file_name_array = file_name.split("-")
     @artist_name = file_name_array[0].strip
     @name = file_name_array[1].strip[0..@name.length - 4]
-    Song.create
+    song = Song.create
     song.artist_name = @artist_name
     song 
   end 
