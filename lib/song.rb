@@ -49,7 +49,7 @@ class Song
     @artist_name = file_name_array[0].strip
     @name = file_name_array[1].strip
     Song.create
-    self.artist_name = @artist_name
+    song.artist_name = @artist_name
     song 
   end 
   
