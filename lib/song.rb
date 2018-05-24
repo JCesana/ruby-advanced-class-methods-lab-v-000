@@ -17,19 +17,19 @@ class Song
     song 
   end 
   
-  def self.new_by_name(name)
+  def self.new_by_name(song_name)
     song = Song.new 
-    song.name = name
+    song.name = song_name
     song
   end 
   
-  def self.create_by_name(name)
+  def self.create_by_name(song_name)
     @name = name
     Song.create 
   end 
   
-  def self.find_by_name(name)
-    self.all.detect { |song| song.name == name }
+  def self.find_by_name(song_name)
+    self.all.detect { |song| song.name == song_name }
   end 
   
   def self.find_or_create_by_name(name)
