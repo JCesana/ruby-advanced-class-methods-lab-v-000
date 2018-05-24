@@ -53,6 +53,16 @@ class Song
     song 
   end 
   
+  def self.create_from_filename(file_name)
+    file_name_array = file_name.split("-")
+    @artist_name = file_name_array[0].strip
+    @name = file_name_array[1].sub('.mp3', '').strip
+    song = Song.create
+    song.artist_name = @artist_name
+    song 
+  end 
+  
+  
 end
 
 
