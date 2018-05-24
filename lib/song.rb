@@ -48,7 +48,8 @@ class Song
     file_name_array = filename.split("-")
     @artist_name = file_name_array[0].strip
     @name = file_name_array[1].sub('.mp3', '').strip
-    song = Song.create
+    song = Song.new
+    song.name = @name 
     song.artist_name = @artist_name
     song 
   end 
